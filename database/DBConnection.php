@@ -24,7 +24,7 @@ class DBConnection
         return self::$instance;
     }
 
-    public function getConnection(){
+    private function getConnection(){
         return $this->connection;
     }
 
