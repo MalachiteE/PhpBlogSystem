@@ -1,4 +1,6 @@
 <?php include 'http://localhost/PhpBlogSystem/header.php' ?>
+
+<!-- @todo must return message for mistake -->
 <div class="row">
     <h4 class="col s12">Registration</h4>
     <form action="http://localhost/PhpBlogSystem/route.php?module=Registration&method=insert" method="post" class="col s6">

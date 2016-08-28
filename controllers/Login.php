@@ -22,15 +22,16 @@ class Login{
         $connection = DBConnection::getDBConnection();
         $userObj = new UsersDto(null, $user['password'], $user['email']);
         $userDao = new UsersDao();
-        //echo "<pre>", var_dump($user["username"],$userObj), "</pre>";die();
-
+        
         $hasLogin = $userDao->authentication($connection, $userObj);
         
         if($hasLogin){
-            header("Location: http://localhost/PhpBlogSystem/index.php");
+            session_start();
+            $_SESSION['email']=$userObj->getEmail();
+            header("Location: http://localhost/PhpBlogSystem/views/tanks.php");
         }
         else{
-            header("Location: http://localhost/PhpBlogSystem/views/registration.php");
+            header("Location: http://localhost/PhpBlogSystem/views/login.php");
         }
        
    } 
