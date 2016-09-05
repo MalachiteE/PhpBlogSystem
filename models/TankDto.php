@@ -6,13 +6,15 @@ class TankDto{
     private $descr;
     private $img;
     private $user_id;
+    private $id;
     
     
-    public function __construct($name, $descr, $img, $userId=null){
+    public function __construct($name, $descr, $img, $userId=null, $id=null){
         $this->setName($name);
         $this->setDescr($descr);
         $this->setImg($img);
         $this->setUserId($userId);
+        $this->setId($id);
     }
     
     public function setName($name){
@@ -41,6 +43,13 @@ class TankDto{
     }
     public function getUserId(){
         return $this->user_id;
+    }
+    
+    public function setId($id){
+        $this->id = $id;
+    }
+    public function getId(){
+        return $this->id;
     }
     
 }
