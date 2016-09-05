@@ -1,26 +1,32 @@
-<?php 
-include 'http://localhost/PhpBlogSystem/header.php' ?>
-<div class="row">
-    <h4 class="col s12">Login</h4>
-    <form action="http://localhost/PhpBlogSystem/route.php?module=Login&method=authentication" method="post" class="col s6">
+
+<div class="Login SubmitForm row">
+    
+    <h4 class="SubmitForm__title col s12 center">Login</h4>
+    
+    <form class="SubmitForm__form col push-s4 s4" action="http://localhost/PhpBlogSystem/route.php?module=Login&method=authentication" method="post">
         <div class="row">
-            <div class="input-field col s6">
-              <input id="email" type="text" name="email" class="validate">
-              <label for="email">Email</label>
+            <div class="SubmitForm__field input-field col s12">
+              <input id="email" type="text" name="email" class="SubmitForm__input validate">
+              <label class="SubmitForm__label" for="email">Email</label>
+            </div>
+            <div class="SubmitForm__field input-field col s12">
+              <input id="password" type="password" name="password" class="SubmitForm__input validate">
+              <label class="SubmitForm__label" for="password">Password</label>
+            </div>
+            <div class="SubmitForm__field col s12">
+                <div class="btn-large input-field width-100">
+                    <input id="submit" type="submit" class="SubmitForm__btn validate waves-effect waves-light" value="login">
+                    <i class="material-icons right">send</i>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="input-field col s6">
-              <input id="password" type="password" name="password" class="validate">
-              <label for="password">Password</label>
-            </div>
-        </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="submit" type="submit" class="validate waves-effect waves-light btn" value="submit">
-        </div>
-      </div>
     </form>
+    
+    <div class="col s12">
+        <div class="col push-s4 s4">
+            <a class="Login__registration-link right" href="views/registration.php">Do you have a registration?</a>
+        </div>
+    </div>
+    
 </div>
-<?php include 'http://localhost/PhpBlogSystem/footer.php' ?>
 
