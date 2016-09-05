@@ -41,5 +41,10 @@ class Tank{
         return (new TankDao)->getTanksByUserId($connection);       
     }
     
+    public static function getTankInformationById(){
+        $connection = DBConnection::getDBConnection();
+        return (new TankDao)->getTankInformationById($connection,$_GET['id']);       
+    }
+    
 }
 
