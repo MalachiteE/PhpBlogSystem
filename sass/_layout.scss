@@ -1,40 +1,31 @@
-@charset "UTF-8";
+$nav-bg: #333;
+$main-container-bg: rgba(255,255,255,0.7);
+$main-margin-bottom: 15px;
 
-// Mixins
-// @import "components/prefixer";
-@import "components/mixins";
-@import "components/color";
+body{
+    background-image: url('../images/bg5.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
-// Variables;
-@import "components/variables";
+.row{
+    margin: 0 auto;
+    max-width: 85rem;
+    width: 100%;
+    margin-bottom: $main-margin-bottom;
+}
 
-// Reset
-@import "components/normalize";
+.Navigation{
+    a{
+        font-size: 20px;
+    }
+}
+nav, .row{
+    margin-bottom: $main-margin-bottom;
+}
 
-// components
-@import "components/global";
-@import "components/icons-material-design";
-@import "components/grid";
-@import "components/navbar";
-@import "components/roboto";
-@import "components/typography";
-@import "components/cards";
-@import "components/toast";
-@import "components/tabs";
-@import "components/tooltip";
-@import "components/buttons";
-@import "components/dropdown";
-@import "components/waves";
-@import "components/modal";
-@import "components/collapsible";
-@import "components/chips";
-@import "components/materialbox";
-@import "components/forms/forms";
-@import "components/table_of_contents";
-@import "components/sideNav";
-@import "components/preloader";
-@import "components/slider";
-@import "components/carousel";
-@import "components/date_picker/default";
-@import "components/date_picker/default.date";
-@import "components/date_picker/default.time";
+.MainContainer{
+    height: 100vh;
+    background-color: $main-container-bg; 
+    border-radius: 5px;
+}

@@ -6,7 +6,15 @@
 @import "components/color";
 
 // Variables;
-@import "components/variables";
+//@import "components/variables";
+
+// Custom files
+@import "settings";
+@import "layout";
+@import "General";
+@import "SubmitForm";
+@import "Login";
+// end custom files
 
 // Reset
 @import "components/normalize";
