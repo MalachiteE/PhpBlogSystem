@@ -2803,9 +2803,25 @@ nav, .row {
 
 /* line 27, ../sass/_layout.scss */
 .MainContainer {
-  height: 100vh;
+  min-height: 100vh;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 5px;
+  padding-bottom: 15px;
+}
+@media only screen and (max-width: 992px) {
+  /* line 27, ../sass/_layout.scss */
+  .MainContainer {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+/* line 39, ../sass/_layout.scss */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 /* line 2, ../sass/_General.scss */
@@ -2817,24 +2833,44 @@ nav, .row {
 .SubmitForm {
   padding-top: 120px;
 }
-/* line 6, ../sass/_SubmitForm.scss */
+@media only screen and (max-width: 992px) {
+  /* line 2, ../sass/_SubmitForm.scss */
+  .SubmitForm {
+    padding-top: 80px;
+  }
+}
+/* line 8, ../sass/_SubmitForm.scss */
 .SubmitForm .SubmitForm__title {
   color: #333;
   margin-bottom: 50px;
 }
-/* line 13, ../sass/_SubmitForm.scss */
+/* line 15, ../sass/_SubmitForm.scss */
 .SubmitForm .SubmitForm__form .SubmitForm__field {
   margin-bottom: 20px;
 }
-/* line 19, ../sass/_SubmitForm.scss */
+/* line 21, ../sass/_SubmitForm.scss */
 .SubmitForm .SubmitForm__form .SubmitForm__label {
   font-size: 18px;
   color: #000;
 }
-/* line 23, ../sass/_SubmitForm.scss */
+/* line 25, ../sass/_SubmitForm.scss */
 .SubmitForm .SubmitForm__form .SubmitForm__btn, .SubmitForm .SubmitForm__form i {
   color: #333;
   font-size: 20px;
+}
+
+/* line 2, ../sass/_Breadcrumbs.scss */
+.Breadcrumbs {
+  background-color: transparent;
+  box-shadow: 0 0 0 0;
+}
+/* line 7, ../sass/_Breadcrumbs.scss */
+.Breadcrumbs .breadcrumb {
+  font-size: 16px;
+}
+/* line 10, ../sass/_Breadcrumbs.scss */
+.Breadcrumbs .breadcrumb:before {
+  margin: 0 5px;
 }
 
 /* line 4, ../sass/_Login.scss */
@@ -2842,6 +2878,32 @@ nav, .row {
   margin-top: -20px;
   padding-right: 8px;
   font-size: 16px;
+}
+
+/* line 2, ../sass/_Tanks.scss */
+.Tanks {
+  padding: 20px 15px 0px 15px;
+}
+@media only screen and (max-width: 992px) {
+  /* line 2, ../sass/_Tanks.scss */
+  .Tanks {
+    padding: 15px 5px 0px 5px;
+  }
+}
+
+/* line 2, ../sass/_Tank.scss */
+.Tank {
+  padding: 20px 15px 0px 15px;
+}
+@media only screen and (max-width: 992px) {
+  /* line 2, ../sass/_Tank.scss */
+  .Tank {
+    padding: 15px 5px 0px 5px;
+  }
+}
+/* line 7, ../sass/_Tank.scss */
+.Tank img {
+  width: 100%;
 }
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -6430,8 +6492,8 @@ input[type=tel]:focus:not([readonly]),
 input[type=number]:focus:not([readonly]),
 input[type=search]:focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
-  border-bottom: 1px solid #d4e157;
-  box-shadow: 0 1px 0 0 #d4e157;
+  border-bottom: 1px solid #7c8718;
+  box-shadow: 0 1px 0 0 #7c8718;
 }
 /* line 73, ../sass/components/forms/_input-fields.scss */
 input:not([type]):focus:not([readonly]) + label,
@@ -6447,7 +6509,7 @@ input[type=tel]:focus:not([readonly]) + label,
 input[type=number]:focus:not([readonly]) + label,
 input[type=search]:focus:not([readonly]) + label,
 textarea.materialize-textarea:focus:not([readonly]) + label {
-  color: #d4e157;
+  color: #7c8718;
 }
 /* line 78, ../sass/components/forms/_input-fields.scss */
 input:not([type]).valid, input:not([type]):focus.valid,
@@ -6635,7 +6697,7 @@ textarea.materialize-textarea + label:after {
 }
 /* line 151, ../sass/components/forms/_input-fields.scss */
 .input-field .prefix.active {
-  color: #d4e157;
+  color: #7c8718;
 }
 /* line 154, ../sass/components/forms/_input-fields.scss */
 .input-field .prefix ~ input,

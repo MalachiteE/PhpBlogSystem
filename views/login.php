@@ -3,7 +3,7 @@
     
     <h4 class="SubmitForm__title col s12 center">Login</h4>
     
-    <form class="SubmitForm__form col push-s4 s4" action="http://localhost/PhpBlogSystem/route.php?module=Login&method=authentication" method="post">
+    <form class="SubmitForm__form col push-s0 s12 push-m2 m8 push-l4 l4" action="http://localhost/PhpBlogSystem/route.php?module=Login&method=authentication" method="post">
         <div class="row">
             <div class="SubmitForm__field input-field col s12">
               <input id="email" type="text" name="email" class="SubmitForm__input validate">
@@ -23,7 +23,7 @@
     </form>
     
     <div class="col s12">
-        <div class="col push-s4 s4">
+        <div class="col push-s0 s12 push-m2 m8 push-l4 l4">
             <a class="Login__registration-link right" href="views/registration.php">Do you have a registration?</a>
         </div>
     </div>
