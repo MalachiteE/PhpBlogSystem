@@ -1,0 +1,7 @@
+
+.Tanks {  
+    padding: 20px 15px 0px 15px;
+    @media #{$medium-and-down} {
+        padding: 15px 5px 0px 5px;
+    }
+}

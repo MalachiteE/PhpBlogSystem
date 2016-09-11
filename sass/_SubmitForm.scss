@@ -2,7 +2,9 @@
 .SubmitForm {
     
     padding-top: 120px;
-
+    @media #{$medium-and-down} {
+        padding-top: 80px;
+    }
     .SubmitForm__title {
         color: #333;
         margin-bottom: 50px;

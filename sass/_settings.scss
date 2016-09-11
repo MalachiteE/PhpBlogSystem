@@ -149,7 +149,7 @@ $input-border: 1px solid $input-border-color !default;
 $input-background: #fff !default;
 $input-error-color: $error-color !default;
 $input-success-color: $success-color !default;
-$input-focus-color: $secondary-color !default;
+$input-focus-color: darken($secondary-color, 30%) !default;
 $input-font-size: 1.2rem !default;
 $input-margin: 0 0 15px 0 !default;
 $input-padding: 0 !default;

@@ -25,7 +25,20 @@ nav, .row{
 }
 
 .MainContainer{
-    height: 100vh;
+    min-height: 100vh;
     background-color: $main-container-bg; 
     border-radius: 5px;
+    padding-bottom: 15px;
+    @media #{$medium-and-down} {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+// it removes yellow background of input in chrome
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
 }
