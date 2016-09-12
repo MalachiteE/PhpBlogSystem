@@ -5,6 +5,7 @@ class TankDao{
     private static $INSERT_QUERY = "INSERT INTO tank(name, user_id, descr, img) VALUES(:NAME, :USER_ID, :DESCR, :IMG )";
     private static $SELECT_BY_USER_ID_QUERY = 'SELECT id, name, descr, img FROM tank WHERE user_id=:USER_ID';
     private static $SELECT_BY_ID_QUERY = 'SELECT id, name, descr, img FROM tank WHERE id=:ID';
+    private static $DELETE_BY_ID_QUERY = 'DELETE FROM tank WHERE id=:ID';
     
     
     public function insert($connection, TankDto $tank){
@@ -42,6 +43,13 @@ class TankDao{
         $row = $stmt->fetch();
         
         return new TankDto($row['name'],$row['descr'],$row['img'],$userId,$row['id']);
+    }
+    
+    public function removeTankById($connection, $id){
+        $stmt = $connection->prepare(self::$DELETE_BY_ID_QUERY);
+        $stmt->bindValue(":ID", $id, PDO::PARAM_INT);
+        
+        return $stmt->execute();
     }
     
 }

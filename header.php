@@ -36,6 +36,6 @@
         </div>
     </nav>
     
-    <div class="row"> <!-- main container -->
+    <div class="row"> 
         
-        <div class="MainContainer">
+        <div class="MainContainer"> <!-- main container -->
