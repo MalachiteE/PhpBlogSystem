@@ -1,7 +1,33 @@
 
-.Tanks {  
+.Tanks { 
+    
     padding: 20px 15px 0px 15px;
     @media #{$medium-and-down} {
         padding: 15px 5px 0px 5px;
     }
+    
+    .Tanks__delete-btn{
+        height: 24px;
+        line-height: 24px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    &__modal-header{
+        color: #d32f2f;
+    }
+    
+    &__modal-footer{
+        text-align: center;
+        padding-bottom: 20px;
+        a{
+            border: 1px solid #ddd;
+            width: 110px;  
+        }
+        
+    }
+    &__modal-agree-btn{
+        margin-right: 15px;
+    }
+    
 }

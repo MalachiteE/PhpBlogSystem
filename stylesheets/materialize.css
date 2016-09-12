@@ -2890,6 +2890,31 @@ input:-webkit-autofill:active {
     padding: 15px 5px 0px 5px;
   }
 }
+/* line 9, ../sass/_Tanks.scss */
+.Tanks .Tanks__delete-btn {
+  height: 24px;
+  line-height: 24px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 16, ../sass/_Tanks.scss */
+.Tanks__modal-header {
+  color: #d32f2f;
+}
+/* line 20, ../sass/_Tanks.scss */
+.Tanks__modal-footer {
+  text-align: center;
+  padding-bottom: 20px;
+}
+/* line 23, ../sass/_Tanks.scss */
+.Tanks__modal-footer a {
+  border: 1px solid #ddd;
+  width: 110px;
+}
+/* line 29, ../sass/_Tanks.scss */
+.Tanks__modal-agree-btn {
+  margin-right: 15px;
+}
 
 /* line 2, ../sass/_Tank.scss */
 .Tank {
