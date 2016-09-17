@@ -2892,10 +2892,10 @@ input:-webkit-autofill:active {
 }
 /* line 9, ../sass/_Tanks.scss */
 .Tanks .Tanks__delete-btn {
-  height: 24px;
-  line-height: 24px;
-  padding-left: 20px;
-  padding-right: 20px;
+  height: 22px;
+  line-height: 22px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 /* line 16, ../sass/_Tanks.scss */
 .Tanks__modal-header {
