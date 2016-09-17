@@ -7,10 +7,10 @@
  */
 class UsersDto{
      
-    private $id = '';
-    private $username = '';
-    private $password = '';
-    private $email = '';
+    private $id;
+    private $username;
+    private $password;
+    private $email;
     
 function __construct($username, $password, $email) {
         $this->setUsername($username);

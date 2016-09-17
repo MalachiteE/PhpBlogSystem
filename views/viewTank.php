@@ -1,5 +1,6 @@
-<?php
+<?php session_start() ?>
 
+<?php
 // @todo must be in controllers
 require '../database/DBConnection.php';
 require '../controllers/Tank.php';
@@ -13,15 +14,14 @@ require '../models/StatusDto.php';
 $tank = Tank::getTankInformationById();
 $currentStatus = Status::getCurrentStatusByTankId($tank->getId());
 
-session_start();
+
 if(!$_SESSION){
-    header("Location: http://localhost/PhpBlogSystem/views/login.php");
+    header("Location: http://localhost/PhpBlogSystem/index.php");
 }
 
-include 'http://localhost/PhpBlogSystem/header.php';
-
-
 ?>
+
+<?php include realpath('../header.php') ?>
 
 <div class="Tank row">
     
@@ -55,4 +55,4 @@ include 'http://localhost/PhpBlogSystem/header.php';
      
 </div>
 
-<?php include 'http://localhost/PhpBlogSystem/footer.php' ?>
+<?php include realpath('../footer.php') ?>

@@ -1,5 +1,6 @@
+<?php session_start() ?>
 
-<?php include 'http://localhost/PhpBlogSystem/header.php' ;
+<?php include realpath('../header.php') ;
 ?>
 
 <!-- @todo must return message for mistake -->
@@ -7,7 +8,7 @@
     
     <h4 class="SubmitForm__title col s12 center">Add tank</h4>
     
-    <form class="SubmitForm__form col push-s0 s12 push-m2 m8 push-l4 l4" action="http://localhost/PhpBlogSystem/route.php?module=Tank&method=insert" method="post" enctype="multipart/form-data">
+    <form class="SubmitForm__form col push-s0 s12 push-m2 m8 push-l4 l4" action="../route.php?module=Tank&method=insert" method="post" enctype="multipart/form-data">
         <div class="row">
             <div class="SubmitForm__field input-field col s12">
                 <!-- @todo must be set values -->
@@ -30,4 +31,4 @@
     
 </div>
 
-<?php include 'http://localhost/PhpBlogSystem/footer.php' ?>
+<?php realpath('../footer.php') ?>

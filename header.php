@@ -23,15 +23,13 @@
 //            ?>
 <!--              <a href="http://localhost/PhpBlogSystem/views/addTank.php" class="waves-effect waves-light btn">Add tank</a>-->
             <?php 
-//            endif; ?>
+//            endif; ?>  
             <?php
-//            if(@$_SESSION): ?>
-<!--                <li>Hello, <?php //$_SESSION['email'] ?></li>-->
-            <?php
-//            else: ?>
-<!--                <li><a href="http://localhost/PhpBlogSystem/views/registration.php">Register</a></li>-->
-            <?php 
-//            endif; ?>
+            if(@$_SESSION): ?>
+                <li>Hello, <?= $_SESSION['username'] ?></li>
+                <li><a href="../route.php?module=Logout&method=logout"><i class="tiny material-icons">input</i></a></li>
+                <?php 
+            endif; ?>
           </ul>
         </div>
     </nav>

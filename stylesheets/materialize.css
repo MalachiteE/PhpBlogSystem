@@ -2792,7 +2792,7 @@ body {
 }
 
 /* line 19, ../sass/_layout.scss */
-.Navigation a {
+.Navigation li, .Navigation a {
   font-size: 20px;
 }
 

@@ -42,17 +42,16 @@ class UsersDao{
         $stmt->bindValue(":EMAIL", $user->getEmail(), PDO::PARAM_STR);
         $stmt->bindValue(":PASSWORD", $user->getPassword(), PDO::PARAM_STR);
         $stmt->execute();
+        $row = $stmt->fetch();
         
-        return $stmt->fetch(PDO::FETCH_ASSOC);
+        return new UsersDto($row['username'], $row['password'], $row['email']);
     }
     
     public function getUserIdByEmail($connection){
-        session_start();
         $stmt = $connection->prepare(self::$SELECT_BY_EMAIL_QUERY);
         $stmt->bindValue(":EMAIL", $_SESSION['email'], PDO::PARAM_STR);
         $stmt->execute();
         $user_id = (int)$stmt->fetch(PDO::FETCH_ASSOC)['id'];
-        session_abort();
         // @todo can you return a sting instead of object
         return $user_id;        
     }

@@ -1,4 +1,5 @@
-<?php
+<?php session_start();
+
 function __autoload($class_name){
     // @todo must be function
     if(file_exists('models/'.$class_name. '.php')){
@@ -23,15 +24,15 @@ class Login{
         $userObj = new UsersDto(null, $user['password'], $user['email']);
         $userDao = new UsersDao();
         
-        $hasLogin = $userDao->authentication($connection, $userObj);
+        $newUserObj = $userDao->authentication($connection, $userObj);
         
-        if($hasLogin){
-            session_start();
-            $_SESSION['email']=$userObj->getEmail();
+        if($newUserObj){
+            $_SESSION['username']=$newUserObj->getUsername();
+            $_SESSION['email']=$newUserObj->getEmail();
             header("Location: http://localhost/PhpBlogSystem/views/tanks.php");
         }
         else{
-            header("Location: http://localhost/PhpBlogSystem/views/login.php");
+            header("Location: http://localhost/PhpBlogSystem/index.php");
         }
        
    } 

@@ -1,4 +1,5 @@
 <?php
+
 function __autoload($class_name){
     // @todo must be function
     if(file_exists('models/'.$class_name. '.php')){

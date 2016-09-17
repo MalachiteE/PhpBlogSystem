@@ -1,5 +1,6 @@
-<?php
+<?php session_start() ?>
 
+<?php
 // @todo must be in controllers
 require '../controllers/Tank.php';
 require '../database/DBConnection.php';
@@ -8,16 +9,15 @@ require '../models/UsersDao.php';
 require '../models/TankDto.php';
 $tanks = Tank::getTanksByUserId();
 
-session_start();
+
 if(!$_SESSION){
-    header("Location: http://localhost/PhpBlogSystem/views/login.php");
+    header("Location: http://localhost/PhpBlogSystem/index.php");
 }
 ?>
 
-<?php include Constants::getFullPath('header')
- // @todo add tank must be moved somewhere else       
-?>
+<?php include realpath('../header.php') ?>
 
+<?php //@todo add tank must be moved somewhere else ?>
 <div class="row" style="margin-bottom: 0">
     <div class="right" style="padding: 20px 27px 0 27px">
         <a href="http://localhost/PhpBlogSystem/views/addTank.php" class="waves-effect waves-light btn">Add tank</a>
@@ -71,4 +71,4 @@ if(!$_SESSION){
     endforeach; ?>
 </div>
 
-<?php include Constants::getFullPath('footer') ?>
+<?php include realpath('../footer.php') ?>
