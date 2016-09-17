@@ -15,7 +15,7 @@
             </div>
             <div class="SubmitForm__field col s12">
                 <div class="btn-large input-field width-100">
-                    <input id="submit" type="submit" class="SubmitForm__btn validate waves-effect waves-light" value="login">
+                    <input id="submit" type="submit" class="SubmitForm__btn validate waves-effect waves-light" value="login"/>
                     <i class="material-icons right">send</i>
                 </div>
             </div>

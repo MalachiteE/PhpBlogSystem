@@ -15,23 +15,23 @@
    
     <nav class="Navigation" style="background-color: #333"> 
         <div class="row nav-wrapper">
-          <a href="#" class="brand-logo">DenZy</a>
+          <a href="http://localhost/PhpBlogSystem/index.php" class="brand-logo">DenZy</a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <?php
             //var_dump($_SERVER,strpos($_SERVER['PHP_SELF'], 'tanks.php'));die();
-            if(strpos($_SERVER['PHP_SELF'], 'tanks.php')):   
-            ?>
-              <a href="http://localhost/PhpBlogSystem/views/addTank.php" class="waves-effect waves-light btn">Add tank</a>
+//            if(strpos($_SERVER['PHP_SELF'], 'tanks.php')):   
+//            ?>
+<!--              <a href="http://localhost/PhpBlogSystem/views/addTank.php" class="waves-effect waves-light btn">Add tank</a>-->
             <?php 
-            endif; ?>
+//            endif; ?>
             <?php
-            if(@$_SESSION): ?>
-                <li>Hello, <?= $_SESSION['email'] ?></li>
+//            if(@$_SESSION): ?>
+<!--                <li>Hello, <?php //$_SESSION['email'] ?></li>-->
             <?php
-            else: ?>
-                <li><a href="http://localhost/PhpBlogSystem/views/registration.php">Register</a></li>
+//            else: ?>
+<!--                <li><a href="http://localhost/PhpBlogSystem/views/registration.php">Register</a></li>-->
             <?php 
-            endif; ?>
+//            endif; ?>
           </ul>
         </div>
     </nav>

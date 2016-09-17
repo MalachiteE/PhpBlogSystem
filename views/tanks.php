@@ -14,12 +14,16 @@ if(!$_SESSION){
 }
 ?>
 
-<?php include Constants::getFullPath('header') ?>
-<!--<div class="">
-    <div class="col s12 center">
+<?php include Constants::getFullPath('header')
+ // @todo add tank must be moved somewhere else       
+?>
+
+<div class="row" style="margin-bottom: 0">
+    <div class="right" style="padding: 20px 27px 0 27px">
         <a href="http://localhost/PhpBlogSystem/views/addTank.php" class="waves-effect waves-light btn">Add tank</a>
     </div>
-</div>-->
+</div>
+
 
 <div class="Tanks row">
     <?php 
@@ -28,14 +32,16 @@ if(!$_SESSION){
             <div class="card">
                 
                 <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="<?= File::getUploadedImage($tank->getImg(), '../images/uploads/')?>" height="270">
+                    <a href="<?= Constants::getFullPath('views/viewTank').'?id='.$tank->getId()?>">
+                        <img src="<?= File::getUploadedImage($tank->getImg(), '../images/uploads/')?>" height="270">
+                    </a>
                 </div>
                 
                 <div class="card-content">
                     <span class="card-title activator grey-text text-darken-4"><?= $tank->getName(); ?><i class="material-icons right">more_vert</i></span>
                     <p>
-                        <a href="<?= Constants::getFullPath('views/viewTank').'?id='.$tank->getId()?>">view more details</a>
-                        <a class="Tanks__delete-btn waves-effect waves-light btn modal-trigger right" href="#tank<?= $tank->getId()?>">delete</a>
+                        <a class="Tanks__delete-btn waves-effect waves-light btn modal-trigger" href="<?= Constants::getFullPath('views/viewTank').'?id='.$tank->getId()?>">open</a>
+                        <a class="Tanks__delete-btn waves-effect waves-light btn modal-trigger" href="#tank<?= $tank->getId()?>">delete</a>
                     </p>
                     
                     <div id="tank<?= $tank->getId()?>" class="modal">
@@ -45,7 +51,7 @@ if(!$_SESSION){
                         <div class="Tanks__modal-footer">
                             <a href="<?= Constants::getFullPath('controllers/ajax/Tank') ?>" data-delete-tank data-id="<?= $tank->getId()?>" 
                                class="Tanks__modal-agree-btn modal-action waves-effect waves-green btn-flat">Yes</a>
-                            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">No</a>
                         </div>
                     </div>
                 </div>
