@@ -1,0 +1,2 @@
+Redirect http://localhost/PhpBlogSystem/views/login.php http://localhost/PhpBlogSystem/index.php
+DirectoryIndex index.php index.php3
