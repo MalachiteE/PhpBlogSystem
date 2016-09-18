@@ -3,7 +3,7 @@
     
     <h4 class="SubmitForm__title col s12 center">Login</h4>
     
-    <form class="SubmitForm__form col push-s0 s12 push-m2 m8 push-l4 l4" action="route.php?module=Login&method=authentication" method="post">
+    <form class="SubmitForm__form col push-s0 s12 push-m2 m8 push-l4 l4" action="route.php?module=Login&method=authenticate" method="post">
         <div class="row">
             <div class="SubmitForm__field input-field col s12">
               <input id="email" type="text" name="email" class="SubmitForm__input validate" />

@@ -36,15 +36,19 @@ class UsersDao{
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
     
-    public function authentication($connection, UsersDto $user){
+    public function authenticate($connection, UsersDto $user){
        
         $stmt = $connection->prepare(self::$SELECT_QUERY);
         $stmt->bindValue(":EMAIL", $user->getEmail(), PDO::PARAM_STR);
         $stmt->bindValue(":PASSWORD", $user->getPassword(), PDO::PARAM_STR);
         $stmt->execute();
         $row = $stmt->fetch();
+        // @todo is it correct
+        if($row){
+            return new UsersDto($row['username'], $row['password'], $row['email']);
+        }
         
-        return new UsersDto($row['username'], $row['password'], $row['email']);
+        return false;   
     }
     
     public function getUserIdByEmail($connection){

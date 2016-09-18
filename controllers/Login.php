@@ -18,14 +18,13 @@ function __autoload($class_name){
 
 class Login{
     
-   public function authentication($user){
+   public function authenticate($user){
        
         $connection = DBConnection::getDBConnection();
         $userObj = new UsersDto(null, $user['password'], $user['email']);
         $userDao = new UsersDao();
-        
-        $newUserObj = $userDao->authentication($connection, $userObj);
-        
+        // @todo is it correct
+        $newUserObj = $userDao->authenticate($connection, $userObj);
         if($newUserObj){
             $_SESSION['username']=$newUserObj->getUsername();
             $_SESSION['email']=$newUserObj->getEmail();
