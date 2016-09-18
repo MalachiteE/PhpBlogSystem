@@ -20,26 +20,25 @@ class Status{
     public function insert($status){
         $connection = DBConnection::getDBConnection();
         $statusObj = new StatusDto($status['time'],$status['water_temp'],$status['pump'],$status['heater'],$status['room_temp']);
-        $statusDao = new StatusDao();
         
-        $statusDao->insert($connection, $statusObj);
+        StatusDao::insert($connection, $statusObj);
         die();    
     }
     
-    public static function getAllStatusesByTankId($tank_id){
+    public function getStatusesByTankId($tank_id){
         $connection = DBConnection::getDBConnection();
-        return (new StatusDao)->getAllStatusesByTankId($connection,$tank_id);       
+        return StatusDao::getStatusesByTankId($connection,$tank_id);       
     }
     
-    public static function getCurrentStatusByTankId($tank_id){
+    public function getCurrentStatusByTankId($tank_id){
         $connection = DBConnection::getDBConnection();
-        return (new StatusDao)->getCurrentStatusByTankId($connection,$tank_id);       
+        return StatusDao::getCurrentStatusByTankId($connection,$tank_id);       
     }
     
-    public static function testGraphic(){
-        $statuses=self::getAllStatusesByTankId($_GET['id']);
+    //public static function testGraphic(){
+    //    $statuses=self::getStatusesByTankId($_GET['id']);
         //var_dump($statuses);die();
-    }
+    //}
     
 }
 

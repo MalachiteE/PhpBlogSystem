@@ -39,12 +39,12 @@ class Tank{
         
     }
     
-    public static function getTanksByUserId(){
+    public function getTanksByUserId(){
         $connection = DBConnection::getDBConnection();
         return TankDao::getTanksByUserId($connection);       
     }
     
-    public static function getTankById(){
+    public function getTankById(){
         $connection = DBConnection::getDBConnection();
         return TankDao::getTankById($connection, $_GET['id']);       
     }

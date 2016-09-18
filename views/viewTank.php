@@ -11,8 +11,8 @@ require '../controllers/Status.php';
 require '../models/StatusDao.php';
 require '../models/StatusDto.php';
 
-$tank = Tank::getTankById();
-$currentStatus = Status::getCurrentStatusByTankId($tank->getId());
+$tank = (new Tank)->getTankById();
+$currentStatus = (new Status())->getCurrentStatusByTankId($tank->getId());
 
 
 if(!$_SESSION){

@@ -7,7 +7,7 @@ class StatusDao{
     private static $SELECT_All_STATUSES_BY_TANK_ID_QUERY = 'SELECT time, water_temp, pump, heater, room_temp FROM status WHERE tank_id=:TANK_ID ORDER BY id DESC';
 
     
-    public function insert($connection, TankDto $tank){
+    public static function insert($connection, TankDto $tank){
         // @todo must be a new function
         $stmt = $connection->prepare(self::$INSERT_QUERY);
         $stmt->bindValue(":TIME", $tank->getName(), PDO::PARAM_STR);
@@ -20,7 +20,7 @@ class StatusDao{
         return $stmt->execute();
     }
     
-    public function getAllStatusesByTankId($connection, $tankId){
+    public static function getStatusesByTankId($connection, $tankId){
         // @todo can you return a sting instead of object 
         $stmt = $connection->prepare(self::$SELECT_All_STATUSES_BY_TANK_ID_QUERY);
         $stmt->bindValue(":TANK_ID", $tankId, PDO::PARAM_INT);
@@ -37,7 +37,7 @@ class StatusDao{
         //return $listStatuses;
     }
     
-    public function getCurrentStatusByTankId($connection, $tank_id){
+    public static function getCurrentStatusByTankId($connection, $tank_id){
         $stmt = $connection->prepare(self::$SELECT_CURRENT_STATUS_BY_TANK_ID_QUERY);
         $stmt->bindValue(":TANK_ID", $tank_id, PDO::PARAM_INT);
         $stmt->execute();
