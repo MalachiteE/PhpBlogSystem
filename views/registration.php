@@ -9,19 +9,19 @@
         <div class="row">
             <div class="Form__field input-field col s12">
                 <!-- @todo must be set values -->
-                <input id="username" type="text" name="username" class="Form__input validate" value="" />
+                <input id="username" type="text" name="username" class="Form__input validate" value="" required="required" />
                 <label class="Form__label" for="username">Username</label>
             </div>
             <div class="Form__field input-field col s12">
-                <input id="email" type="email" name="email" class="Form__input validate" />
+                <input id="email" type="email" name="email" class="Form__input validate" required="required" />
                 <label class="Form__label" for="email">E-mail</label>
             </div>
             <div class="Form__field input-field col s12">
-                <input id="password" type="password" name="password" class="Form__input validate" />
+                <input id="password" type="password" name="password" class="Form__input validate" required="required" />
                 <label class="Form__label" for="password">Password</label>
             </div>
             <div class="Form__field input-field col s12">
-                <input id="repeat_password" type="password" name="repeat_password" class="Form__input validate" />
+                <input id="repeat_password" type="password" name="repeat_password" class="Form__input validate" required="required" />
                 <label class="Form__label" for="repeat_password">Repeat password</label>
             </div>
             <div class="Form__field col s12">
@@ -32,6 +32,12 @@
             </div>
         </div>
     </form>
+    
+    <div class="col s12">
+        <div class="col push-s0 s12 push-m2 m8 push-l4 l4">
+            <a class="Form__back-link right" href="../index.php">Back to login</a>
+        </div>
+    </div>
     
 </div>
 

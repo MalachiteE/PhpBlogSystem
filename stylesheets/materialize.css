@@ -2859,6 +2859,12 @@ input:-webkit-autofill:active {
   color: #333;
   font-size: 20px  !important;
 }
+/* line 25, ../sass/_Form.scss */
+.Form__back-link {
+  margin-top: -20px;
+  padding-right: 8px;
+  font-size: 18px;
+}
 
 /* line 2, ../sass/_Breadcrumbs.scss */
 .Breadcrumbs {
@@ -2879,13 +2885,6 @@ input:-webkit-autofill:active {
 /* line 15, ../sass/_Breadcrumbs.scss */
 .Breadcrumbs .breadcrumb:before {
   margin: 0 5px;
-}
-
-/* line 4, ../sass/_Login.scss */
-.Login__registration-link {
-  margin-top: -20px;
-  padding-right: 8px;
-  font-size: 16px;
 }
 
 /* line 2, ../sass/_Tanks.scss */

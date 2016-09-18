@@ -24,7 +24,7 @@
     
     <div class="col s12">
         <div class="col push-s0 s12 push-m2 m8 push-l4 l4">
-            <a class="Login__registration-link right" href="views/registration.php">Do you have a registration?</a>
+            <a class="Form__back-link right" href="views/registration.php">Do you have a registration?</a>
         </div>
     </div>
     
