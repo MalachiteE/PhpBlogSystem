@@ -4,7 +4,7 @@ class StatusDao{
     
     private static $INSERT_QUERY = "INSERT INTO status(time, water_temp, pump, heater, room_temp, tank_id) VALUES(:TIME, :WATER_TEMP, :PUMP, :HEATER, :ROOM_TEMP, :TANK_ID)";
     private static $SELECT_CURRENT_STATUS_BY_TANK_ID_QUERY = 'SELECT time, water_temp, pump, heater, room_temp FROM status WHERE tank_id=:TANK_ID ORDER BY id DESC LIMIT 1';
-    private static $SELECT_All_STATUSES_BY_TANK_ID_QUERY = 'SELECT time, water_temp, pump, heater, room_temp FROM status WHERE tank_id=:TANK_ID ORDER BY id DESC';
+    private static $SELECT_STATUSES_BY_TANK_ID_QUERY = 'SELECT time, water_temp, room_temp FROM status WHERE tank_id=:TANK_ID ORDER BY time';
 
     
     public static function insert($connection, TankDto $tank){
@@ -22,7 +22,7 @@ class StatusDao{
     
     public static function getStatusesByTankId($connection, $tankId){
         // @todo can you return a sting instead of object 
-        $stmt = $connection->prepare(self::$SELECT_All_STATUSES_BY_TANK_ID_QUERY);
+        $stmt = $connection->prepare(self::$SELECT_STATUSES_BY_TANK_ID_QUERY);
         $stmt->bindValue(":TANK_ID", $tankId, PDO::PARAM_INT);
         $stmt->execute();
         

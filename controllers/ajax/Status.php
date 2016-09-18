@@ -3,7 +3,7 @@ include '../../database/DBConnection.php';
 include '../../models/StatusDao.php';
 
 $connection = DBConnection::getDBConnection();
-echo $states = StatusDao::getStatusesByTankId($connection, 1);
+echo $states = StatusDao::getStatusesByTankId($connection, $_GET['id']);
 
 
 

@@ -47,7 +47,7 @@ if(!$_SESSION){
     endif; ?>
     <div class="col s12">
         <h4 style="margin-bottom: 40px">Current state</h4>
-        <div id="chart-container">
+        <div class="chart-container" data-chart data-tank-id="<?= $tank->getId()?>">
             <canvas id="mycanvas"></canvas>
         </div>
     </div>
