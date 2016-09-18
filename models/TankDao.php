@@ -8,7 +8,7 @@ class TankDao{
     private static $DELETE_BY_ID_QUERY = 'DELETE FROM tank WHERE id=:ID';
     
     
-    public function insert($connection, TankDto $tank){
+    public static function insert($connection, TankDto $tank){
         // @todo must be a new function
         $stmt = $connection->prepare(self::$INSERT_QUERY);
         $stmt->bindValue(":NAME", $tank->getName(), PDO::PARAM_STR);
@@ -19,9 +19,9 @@ class TankDao{
         return $stmt->execute();
     }
     
-    public function getTanksByUserId($connection){
+    public static function getTanksByUserId($connection){
         // @todo can you return a sting instead of object 
-        $userId = (new UsersDao)->getUserIdByEmail($connection);
+        $userId = UsersDao::getUserIdByEmail($connection);
         $stmt = $connection->prepare(self::$SELECT_BY_USER_ID_QUERY);
         $stmt->bindValue(":USER_ID", $userId, PDO::PARAM_INT);
         $stmt->execute();
@@ -35,8 +35,8 @@ class TankDao{
         return $listObjects;
     }
     
-    public function getTankInformationById($connection, $id){
-        $userId = (new UsersDao)->getUserIdByEmail($connection);
+    public static function getTankById($connection, $id){
+        $userId = UsersDao::getUserIdByEmail($connection);
         $stmt = $connection->prepare(self::$SELECT_BY_ID_QUERY);
         $stmt->bindValue(":ID", $id, PDO::PARAM_INT);
         $stmt->execute();
@@ -45,7 +45,7 @@ class TankDao{
         return new TankDto($row['name'],$row['descr'],$row['img'],$userId,$row['id']);
     }
     
-    public function removeTankById($connection, $id){
+    public static function removeTankById($connection, $id){
         $stmt = $connection->prepare(self::$DELETE_BY_ID_QUERY);
         $stmt->bindValue(":ID", $id, PDO::PARAM_INT);
         

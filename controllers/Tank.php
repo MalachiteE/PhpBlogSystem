@@ -23,15 +23,14 @@ class Tank{
       
     public function insert($tank){
         $connection = DBConnection::getDBConnection();
-        $userId = (new UsersDao)->getUserIdByEmail($connection);
+        $userId = UsersDao::getUserIdByEmail($connection);
         //var_dump($_FILES['img']['name']);die();
         $tankObj = new TankDto($tank['name'], $tank['descr'], $_FILES['img']['name'], $userId);
-        $tankDao = new TankDao();
         
         // @todo must show in form 
         $errorMessage = (new File)->uploadFile();
         
-        if($tankDao->insert($connection, $tankObj)){
+        if(TankDao::insert($connection, $tankObj)){
             header("Location: views/tanks.php");
         }
         else{
@@ -42,12 +41,12 @@ class Tank{
     
     public static function getTanksByUserId(){
         $connection = DBConnection::getDBConnection();
-        return (new TankDao)->getTanksByUserId($connection);       
+        return TankDao::getTanksByUserId($connection);       
     }
     
-    public static function getTankInformationById(){
+    public static function getTankById(){
         $connection = DBConnection::getDBConnection();
-        return (new TankDao)->getTankInformationById($connection,$_GET['id']);       
+        return TankDao::getTankById($connection, $_GET['id']);       
     }
     
 }

@@ -26,9 +26,7 @@ class Registration{
             header("Location: views/registration.php");
         }
         else{
-            
-            $userDao = new UsersDao();
-            $isExecuted = $userDao->insertUser($connection, $userObj);
+            $isExecuted = UsersDao::insert($connection, $userObj);
             
             if($isExecuted){
                 header("Location: index.php");
@@ -41,10 +39,8 @@ class Registration{
         
     }
     
-    private function hasUserRegistration($connection, $userObj){
-        $userDao = new UsersDao();
-       
-        return $userDao->hasUserRegistration($connection, $userObj);       
+    private function hasUserRegistration($connection, $userObj){       
+        return UsersDao::hasUserRegistration($connection, $userObj);       
     }
     
 }

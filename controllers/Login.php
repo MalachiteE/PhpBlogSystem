@@ -22,9 +22,9 @@ class Login{
        
         $connection = DBConnection::getDBConnection();
         $userObj = new UsersDto(null, $user['password'], $user['email']);
-        $userDao = new UsersDao();
+        
         // @todo is it correct
-        $newUserObj = $userDao->authenticate($connection, $userObj);
+        $newUserObj = UsersDao::authenticate($connection, $userObj);
         if($newUserObj){
             $_SESSION['username']=$newUserObj->getUsername();
             $_SESSION['email']=$newUserObj->getEmail();

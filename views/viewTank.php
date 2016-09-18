@@ -11,7 +11,7 @@ require '../controllers/Status.php';
 require '../models/StatusDao.php';
 require '../models/StatusDto.php';
 
-$tank = Tank::getTankInformationById();
+$tank = Tank::getTankById();
 $currentStatus = Status::getCurrentStatusByTankId($tank->getId());
 
 
