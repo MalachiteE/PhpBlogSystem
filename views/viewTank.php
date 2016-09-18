@@ -16,22 +16,21 @@ $currentStatus = Status::getCurrentStatusByTankId($tank->getId());
 
 
 if(!$_SESSION){
-    header("Location: http://localhost/PhpBlogSystem/index.php");
+    header("Location: ../index.php");
 }
 
 ?>
 
 <?php include realpath('../header.php') ?>
 
+<?php
+    include '_breadcrumbs.php';
+    $nav = [[ 'url'=>'tanks.php', 'name'=>'Tanks' ], [ 'url'=>'viewTank.php?id='.$tank->getId(), 'name'=>$tank->getName() ]];
+    breadcrumbs($nav); 
+?>
+
 <div class="Tank row">
-    
-    <nav class="Breadcrumbs">
-        <div class="col s12">
-            <a href="<?= Constants::getFullPath('views/tanks') ?>" class="breadcrumb">Tanks</a>
-            <a href="<?= Constants::getFullPath('views/viewTank').'?id='.$tank->getId()?>" class="breadcrumb"><?= $tank->getName()?></a>
-        </div>
-    </nav>
-    
+      
     <div class="col s12">
         <h4 style="margin-bottom: 40px"><?= $tank->getName()?></h4>
     </div>

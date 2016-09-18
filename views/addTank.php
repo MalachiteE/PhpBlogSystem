@@ -1,11 +1,21 @@
 <?php session_start() ?>
 
-<?php include realpath('../header.php') ;
+<?php
+if(!$_SESSION){
+    header("Location: ../index.php");
+}
+?>
+
+<?php include realpath('../header.php') ?>
+
+<?php
+include '_breadcrumbs.php';
+$nav = [[ 'url'=>'tanks.php', 'name'=>'Tanks' ], [ 'url'=>'addTank.php', 'name'=>'Add tank' ]];
+breadcrumbs($nav); 
 ?>
 
 <!-- @todo must return message for mistake -->
 <div class="SubmitForm row">
-    
     <h4 class="SubmitForm__title col s12 center">Add tank</h4>
     
     <form class="SubmitForm__form col push-s0 s12 push-m2 m8 push-l4 l4" action="../route.php?module=Tank&method=insert" method="post" enctype="multipart/form-data">
@@ -31,4 +41,4 @@
     
 </div>
 
-<?php realpath('../footer.php') ?>
+<?php include realpath('../footer.php') ?>

@@ -2861,14 +2861,21 @@ input:-webkit-autofill:active {
 
 /* line 2, ../sass/_Breadcrumbs.scss */
 .Breadcrumbs {
+  padding: 20px 15px 0px 15px;
   background-color: transparent;
   box-shadow: 0 0 0 0;
 }
-/* line 7, ../sass/_Breadcrumbs.scss */
-.Breadcrumbs .breadcrumb {
-  font-size: 16px;
+@media only screen and (max-width: 992px) {
+  /* line 2, ../sass/_Breadcrumbs.scss */
+  .Breadcrumbs {
+    padding: 15px 5px 0px 5px;
+  }
 }
-/* line 10, ../sass/_Breadcrumbs.scss */
+/* line 12, ../sass/_Breadcrumbs.scss */
+.Breadcrumbs .breadcrumb {
+  font-size: 18px;
+}
+/* line 15, ../sass/_Breadcrumbs.scss */
 .Breadcrumbs .breadcrumb:before {
   margin: 0 5px;
 }

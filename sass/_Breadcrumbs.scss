@@ -1,11 +1,16 @@
 
 .Breadcrumbs {  
     
+    padding: 20px 15px 0px 15px;
+    @media #{$medium-and-down} {
+        padding: 15px 5px 0px 5px;
+    }
+    
     background-color: transparent;
     box-shadow: 0 0 0 0;
     
     .breadcrumb{
-        font-size: 16px;
+        font-size: 18px;
     }
     .breadcrumb:before{
         margin: 0 5px;
