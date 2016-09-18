@@ -35,7 +35,7 @@ if(!$_SESSION){
         <h4 style="margin-bottom: 40px"><?= $tank->getName()?></h4>
     </div>
     <div class="col s12 m6">
-        <img class="materialboxed" height="400" src="<?= File::getUploadedImage($tank->getImg(), '../images/uploads/') ?>">
+        <img class="materialboxed" height="400" src="<?= File::getUploadedImage($tank->getImg()) ?>">
     </div>
     <?php 
     if($tank->getDescr()): ?>

@@ -33,7 +33,7 @@ if(!$_SESSION){
                 
                 <div class="card-image waves-effect waves-block waves-light">
                     <a href="viewTank.php?id=<?= $tank->getId()?>">
-                        <img src="<?= File::getUploadedImage($tank->getImg(), '../images/uploads/')?>" height="270">
+                        <img src="<?= File::getUploadedImage($tank->getImg())?>" height="270">
                     </a>
                 </div>
                 

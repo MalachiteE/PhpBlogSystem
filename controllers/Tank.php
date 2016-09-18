@@ -29,7 +29,7 @@ class Tank{
         $tankDao = new TankDao();
         
         // @todo must show in form 
-        $errorMessage = (new File)->fileUpload();
+        $errorMessage = (new File)->uploadFile();
         
         if($tankDao->insert($connection, $tankObj)){
             header("Location: views/tanks.php");
