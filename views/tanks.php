@@ -62,11 +62,7 @@ if(!$_SESSION){
                 </div>
                 
             </div>
-        </div>
-        <!-- Modal Trigger -->
-        
-        <!-- Modal Structure -->
-        
+        </div>      
     <?php 
     endforeach; ?>
 </div>

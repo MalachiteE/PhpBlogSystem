@@ -22,7 +22,7 @@ breadcrumbs($nav);
         <div class="row">
             <div class="SubmitForm__field input-field col s12">
                 <!-- @todo must be set values -->
-                <input id="name" type="text" name="name" class="SubmitForm__input validate" value="" required="required">
+                <input id="name" type="text" name="name" class="SubmitForm__input validate" value="" required="required" />
                 <label class="SubmitForm__label" for="name">Name</label>
             </div>
             <div class="SubmitForm__field input-field col s12">
@@ -31,10 +31,10 @@ breadcrumbs($nav);
             </div>
             <div class="SubmitForm__field input-field col s12">
                 <div class="SubmitForm__label">Attach image</div>
-                <input id="img" type="file" name="img" class="validate">
+                <input id="img" type="file" name="img" class="validate" />
             </div>
             <div class="SubmitForm__field input-field col s12">
-                <input id="submit" type="submit" class="validate waves-effect waves-light btn-large width-100" value="add">
+                <input id="submit" type="submit" class="validate waves-effect waves-light btn-large width-100" value="add" />
             </div>
         </div>
     </form>

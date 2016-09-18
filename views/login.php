@@ -6,16 +6,16 @@
     <form class="SubmitForm__form col push-s0 s12 push-m2 m8 push-l4 l4" action="route.php?module=Login&method=authentication" method="post">
         <div class="row">
             <div class="SubmitForm__field input-field col s12">
-              <input id="email" type="text" name="email" class="SubmitForm__input validate">
+              <input id="email" type="text" name="email" class="SubmitForm__input validate" />
               <label class="SubmitForm__label" for="email">Email</label>
             </div>
             <div class="SubmitForm__field input-field col s12">
-              <input id="password" type="password" name="password" class="SubmitForm__input validate">
+              <input id="password" type="password" name="password" class="SubmitForm__input validate" />
               <label class="SubmitForm__label" for="password">Password</label>
             </div>
             <div class="SubmitForm__field col s12">
                 <div class="btn-large input-field width-100">
-                    <input id="submit" type="submit" class="SubmitForm__btn validate waves-effect waves-light" value="login"/>
+                    <input id="submit" type="submit" class="SubmitForm__btn validate waves-effect waves-light" value="login" />
                     <i class="material-icons right">send</i>
                 </div>
             </div>
