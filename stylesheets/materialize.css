@@ -2803,7 +2803,7 @@ nav, .row {
 
 /* line 27, ../sass/_layout.scss */
 .MainContainer {
-  min-height: 100vh;
+  min-height: calc(100vh - (64px + 15px + 20px));
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 5px;
   padding-bottom: 15px;
@@ -2811,12 +2811,13 @@ nav, .row {
 @media only screen and (max-width: 992px) {
   /* line 27, ../sass/_layout.scss */
   .MainContainer {
+    min-height: calc(100vh - (56px + 15px + 20px));
     margin-left: 10px;
     margin-right: 10px;
   }
 }
 
-/* line 39, ../sass/_layout.scss */
+/* line 40, ../sass/_layout.scss */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,

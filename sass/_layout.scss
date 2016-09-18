@@ -2,34 +2,35 @@ $nav-bg: #333;
 $main-container-bg: rgba(255,255,255,0.7);
 $main-margin-bottom: 15px;
 
-body{
+body {
     background-image: url('../images/bg5.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.row{
+.row {
     margin: 0 auto;
     max-width: 85rem;
     width: 100%;
     margin-bottom: $main-margin-bottom;
 }
 
-.Navigation{
-    li,a{
+.Navigation {
+    li,a {
         font-size: 20px;
     }
 }
-nav, .row{
+nav, .row {
     margin-bottom: $main-margin-bottom;
 }
 
-.MainContainer{
-    min-height: 100vh;
+.MainContainer {
+    min-height: calc(100vh - (64px + 15px + 20px)); // header height, margin-bottom of header, margin-bottom of row
     background-color: $main-container-bg; 
     border-radius: 5px;
     padding-bottom: 15px;
     @media #{$medium-and-down} {
+        min-height: calc(100vh - (56px + 15px + 20px));
         margin-left: 10px;
         margin-right: 10px;
     }
