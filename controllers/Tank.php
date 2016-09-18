@@ -1,4 +1,7 @@
-<?php session_start();
+<?php 
+if(session_status() != PHP_SESSION_ACTIVE){
+    session_start();
+}
 
 function __autoload($class_name){
     // @todo must be function
