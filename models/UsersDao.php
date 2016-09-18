@@ -40,9 +40,9 @@ class UsersDao{
         return false;   
     }
     
-    public static function getUserIdByEmail($connection){
+    public static function getUserIdByEmail($connection, $email){
         $stmt = $connection->prepare(self::$SELECT_BY_EMAIL_QUERY);
-        $stmt->bindValue(":EMAIL", $_SESSION['email'], PDO::PARAM_STR);
+        $stmt->bindValue(":EMAIL", $email, PDO::PARAM_STR);
         $stmt->execute();
         $user_id = (int)$stmt->fetch(PDO::FETCH_ASSOC)['id'];
         // @todo can you return a sting instead of object

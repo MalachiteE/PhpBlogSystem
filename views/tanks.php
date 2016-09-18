@@ -7,7 +7,7 @@ require '../database/DBConnection.php';
 require '../models/TankDao.php';
 require '../models/UsersDao.php';
 require '../models/TankDto.php';
-$tanks = (new Tank)->getTanksByUserId();
+$tanks = (new Tank)->getUserTanks();
 
 
 if(!$_SESSION){

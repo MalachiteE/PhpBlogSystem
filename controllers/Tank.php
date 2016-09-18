@@ -23,7 +23,7 @@ class Tank{
       
     public function insert($tank){
         $connection = DBConnection::getDBConnection();
-        $userId = UsersDao::getUserIdByEmail($connection);
+        $userId = UsersDao::getUserIdByEmail($connection, $_SESSION['email']);
         //var_dump($_FILES['img']['name']);die();
         $tankObj = new TankDto($tank['name'], $tank['descr'], $_FILES['img']['name'], $userId);
         
@@ -35,13 +35,12 @@ class Tank{
         }
         else{
             header("Location: views/addTank.php");
-        }
-        
+        }      
     }
     
-    public function getTanksByUserId(){
+    public function getUserTanks(){
         $connection = DBConnection::getDBConnection();
-        return TankDao::getTanksByUserId($connection);       
+        return TankDao::getUserTanks($connection);       
     }
     
     public function getTankById(){

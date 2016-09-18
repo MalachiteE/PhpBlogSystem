@@ -19,9 +19,9 @@ class TankDao{
         return $stmt->execute();
     }
     
-    public static function getTanksByUserId($connection){
+    public static function getUserTanks($connection){
         // @todo can you return a sting instead of object 
-        $userId = UsersDao::getUserIdByEmail($connection);
+        $userId = UsersDao::getUserIdByEmail($connection, $_SESSION['email']);
         $stmt = $connection->prepare(self::$SELECT_BY_USER_ID_QUERY);
         $stmt->bindValue(":USER_ID", $userId, PDO::PARAM_INT);
         $stmt->execute();
@@ -36,7 +36,7 @@ class TankDao{
     }
     
     public static function getTankById($connection, $id){
-        $userId = UsersDao::getUserIdByEmail($connection);
+        $userId = UsersDao::getUserIdByEmail($connection, $_SESSION['email']);
         $stmt = $connection->prepare(self::$SELECT_BY_ID_QUERY);
         $stmt->bindValue(":ID", $id, PDO::PARAM_INT);
         $stmt->execute();
