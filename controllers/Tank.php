@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 
 function __autoload($class_name){
     // @todo must be function

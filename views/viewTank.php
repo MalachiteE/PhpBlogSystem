@@ -1,9 +1,9 @@
-<?php session_start() ?>
+<?php //session_start() ?>
 
 <?php
 // @todo must be in controllers
-require '../database/DBConnection.php';
 require '../controllers/Tank.php';
+require '../database/DBConnection.php';
 require '../models/TankDao.php';
 require '../models/TankDto.php';
 require '../models/UsersDao.php';
