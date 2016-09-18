@@ -2830,34 +2830,34 @@ input:-webkit-autofill:active {
   width: 100%;
 }
 
-/* line 2, ../sass/_SubmitForm.scss */
-.SubmitForm {
+/* line 2, ../sass/_Form.scss */
+.Form {
   padding-top: 120px;
 }
 @media only screen and (max-width: 992px) {
-  /* line 2, ../sass/_SubmitForm.scss */
-  .SubmitForm {
+  /* line 2, ../sass/_Form.scss */
+  .Form {
     padding-top: 80px;
   }
 }
-/* line 8, ../sass/_SubmitForm.scss */
-.SubmitForm .SubmitForm__title {
+/* line 8, ../sass/_Form.scss */
+.Form__title {
   color: #333;
   margin-bottom: 50px;
 }
-/* line 15, ../sass/_SubmitForm.scss */
-.SubmitForm .SubmitForm__form .SubmitForm__field {
+/* line 13, ../sass/_Form.scss */
+.Form__field {
   margin-bottom: 20px;
 }
-/* line 21, ../sass/_SubmitForm.scss */
-.SubmitForm .SubmitForm__form .SubmitForm__label {
-  font-size: 18px;
+/* line 16, ../sass/_Form.scss */
+.Form__label {
+  font-size: 18px !important;
   color: #000;
 }
-/* line 25, ../sass/_SubmitForm.scss */
-.SubmitForm .SubmitForm__form .SubmitForm__btn, .SubmitForm .SubmitForm__form i {
+/* line 20, ../sass/_Form.scss */
+.Form__btn, .Form i {
   color: #333;
-  font-size: 20px;
+  font-size: 20px  !important;
 }
 
 /* line 2, ../sass/_Breadcrumbs.scss */

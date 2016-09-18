@@ -1,0 +1,25 @@
+
+.Form {
+    
+    padding-top: 120px;
+    @media #{$medium-and-down} {
+        padding-top: 80px;
+    }
+    &__title {
+        color: #333;
+        margin-bottom: 50px;
+    }
+    
+    &__field {
+        margin-bottom: 20px;
+    }
+    &__label {
+        font-size: 18px !important;
+        color: #000;
+    }
+    &__btn, i {
+        color: #333;
+        font-size: 20px  !important;
+    }
+    
+}
