@@ -29,10 +29,10 @@ class Tank{
         $errorMessage = (new File)->fileUpload();
         
         if($tankDao->insert($connection, $tankObj)){
-            header("Location: http://localhost/PhpBlogSystem/views/tanks.php");
+            header("Location: views/tanks.php");
         }
         else{
-            header("Location: http://localhost/PhpBlogSystem/views/addTank.php");
+            header("Location: views/addTank.php");
         }
         
     }

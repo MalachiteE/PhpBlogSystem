@@ -29,10 +29,10 @@ class Login{
         if($newUserObj){
             $_SESSION['username']=$newUserObj->getUsername();
             $_SESSION['email']=$newUserObj->getEmail();
-            header("Location: http://localhost/PhpBlogSystem/views/tanks.php");
+            header("Location: views/tanks.php");
         }
         else{
-            header("Location: http://localhost/PhpBlogSystem/index.php");
+            header("Location: index.php");
         }
        
    } 

@@ -23,7 +23,7 @@ class Registration{
         $userObj = new UsersDto($user["username"], $user["password"], $user["email"]);
         //echo "<pre>", var_dump($user["username"],$userObj), "</pre>";die();
         if($this->hasUserRegistration($connection, $userObj) || ($user["password"] != $user["repeat_password"])){
-            header("Location: http://localhost/PhpBlogSystem/views/registration.php");
+            header("Location: views/registration.php");
         }
         else{
             
@@ -31,10 +31,10 @@ class Registration{
             $isExecuted = $userDao->insertUser($connection, $userObj);
             
             if($isExecuted){
-                header("Location: http://localhost/PhpBlogSystem/index.php");
+                header("Location: index.php");
             }
             else{
-                header("Location: http://localhost/PhpBlogSystem/views/registration.php");  
+                header("Location: views/registration.php");  
             }
             
         }

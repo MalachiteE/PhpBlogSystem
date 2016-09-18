@@ -20,7 +20,6 @@
             //var_dump($_SERVER,strpos($_SERVER['PHP_SELF'], 'tanks.php'));die();
 //            if(strpos($_SERVER['PHP_SELF'], 'tanks.php')):   
 //            ?>
-<!--              <a href="http://localhost/PhpBlogSystem/views/addTank.php" class="waves-effect waves-light btn">Add tank</a>-->
             <?php 
 //            endif; ?>  
             <?php

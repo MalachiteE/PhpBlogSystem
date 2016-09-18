@@ -7,7 +7,7 @@
         include __DIR__ . '\views\login.php'; 
     }
     else{
-        header("Location: http://localhost/PhpBlogSystem/views/tanks.php");
+        header("Location: views/tanks.php");
     }  
     ?>
     
