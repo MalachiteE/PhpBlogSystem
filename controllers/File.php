@@ -2,7 +2,8 @@
 
 class File{
     
-    private static $path = '../images/uploads/';
+    private static $uploded_file_path = '../images/uploads/'; // path for files which have already uploaded
+    private static $path = 'images/uploads/'; //path for files which will be uploaded 
     private $max_size = 2097152; // this is in bytes (2MB) and this is upload_max_filesize setting in php.ini
     private static $default_image = '../images/fish.jpg';
             
@@ -41,7 +42,7 @@ class File{
     
     public static function getUploadedImage($img, $path=null){
         if(!$path){
-          $path = self::$path;  
+          $path = self::$uploded_file_path;  
         }
         
         return $img && file_exists($path.$img) ? $path.$img : self::$default_image;
