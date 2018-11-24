@@ -25,12 +25,18 @@ class Login{
         
         // @todo is it correct
         $newUserObj = UsersDao::authenticate($connection, $userObj);
+        //var_dumP($newUserObj);die();
+        
         if($newUserObj){
             $_SESSION['username']=$newUserObj->getUsername();
             $_SESSION['email']=$newUserObj->getEmail();
+            if(@$_SESSION['error']){
+                unset($_SESSION['error']);
+            }
             header("Location: views/tanks.php");
         }
         else{
+            //$_SESSION['error'] = "Wrong username or password";
             header("Location: index.php");
         }
        

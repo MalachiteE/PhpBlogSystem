@@ -20,6 +20,7 @@
                 </div>
             </div>
         </div>
+        <?= @$_SESSION['error'] ? $_SESSION['error']:'' ?>
     </form>
     
     <div class="col s12">

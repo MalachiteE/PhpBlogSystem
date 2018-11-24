@@ -6,9 +6,9 @@ $method = $_GET['method'];
 
 if($module && $method){
     if($_POST){
-        (new $module())->$method($_POST);
+        (new $module)->$method($_POST);
     }
     elseif($_GET){
-        (new $module())->$method();
+        (new $module)->$method();
     }     
 }

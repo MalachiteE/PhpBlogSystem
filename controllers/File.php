@@ -16,6 +16,7 @@ class File{
         $uploadPath = self::$path.$fileName; 
 
         if(is_bool($this->isUploaded($uploadPath, $fileSize, $fileType))){
+            //var_dump($uploadPath, $fileSize, $fileType);die('deded');
             if (!move_uploaded_file($fileTmpName, $uploadPath)) {
                 return "Sorry, there was an error uploading your file.";
             } 

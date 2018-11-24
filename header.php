@@ -16,15 +16,14 @@
         <div class="row nav-wrapper">
           <a href="http://localhost/PhpBlogSystem/index.php" class="brand-logo">DenZy</a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <?php
-            //var_dump($_SERVER,strpos($_SERVER['PHP_SELF'], 'tanks.php'));die();
-//            if(strpos($_SERVER['PHP_SELF'], 'tanks.php')):   
-//            ?>
-            <?php 
+                <?php
+//            if(strpos($_SERVER['REQUEST_URI'], 'tanks.php')):   
+              ?> 
+                <?php 
 //            endif; ?>  
             <?php
             if(@$_SESSION): ?>
-                <li>Hello, <?= $_SESSION['username'] ?></li>
+                <li>Hello, <?= @$_SESSION['username'] ?></li>
                 <li><a href="../route.php?module=Logout&method=logout"><i class="tiny material-icons">input</i></a></li>
                 <?php 
             endif; ?>
@@ -35,3 +34,5 @@
     <div class="row"> 
         
         <div class="MainContainer"> <!-- main container -->
+            <?php //phpinfo();
+            //if(strpos($_SERVER['REQUEST_URI'], 'views') && !strpos($_SERVER['REQUEST_URI'], '_')){ ?>

@@ -2938,6 +2938,24 @@ input:-webkit-autofill:active {
   width: 100%;
 }
 
+/* line 1, ../sass/_Error.scss */
+.Error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - (56px + 15px + 45px));
+}
+/* line 8, ../sass/_Error.scss */
+.Error__block {
+  text-align: center;
+}
+/* line 12, ../sass/_Error.scss */
+.Error__msg {
+  font-size: 50px;
+  margin-top: 20px;
+  color: #004d40;
+}
+
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
